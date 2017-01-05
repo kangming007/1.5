@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>债权产品</title>
+</head>
+<body>
+<header class="header">
+    <h3>理财产品</h3>
+    <i class="fa fa-list fa-2x icons"></i>
+</header>
+<section class="content">
+    <div class="title">
+        <span class="on">债权产品</span>
+        <i class="line"></i>
+        <span>优选基金</span>
+    </div>
+    <div class="allData" ng-controller="allDate">
+        <div class="record" ng-repeat="items in data">
+            <div class="tit">
+                <span class="hire">{{items.product}}</span>
+                <img src="images/img1.gif" alt="" class="img">
+                <span>{{items.schedule}}</span>
+            </div>
+            <ul class="substance">
+                <li class="income">
+                    <div class="left">
+                        <i>{{items.proceeds}}</i>
+                    </div>
+                    <div class="right">
+                        <span class="top1">年化收益</span>
+                        <span class="bot1">.0%</span>
+                    </div>
+                </li>
+                <li class="time">
+                    <span class="top2">期限</span>
+                    <span class="bot2"><i>{{items.month}}</i>个月</span>
+                </li>
+                <li class="shop">
+                    <span class="top3">抢购</span>
+                    <span class="bot3">已有<i>{{items.person}}</i>购买</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <dl>
+        <dt><i class="fa fa-home fa-2x"></i></dt>
+        <dd>首页</dd>
+    </dl>
+    <dl>
+        <dt><i class="fa fa-credit-card fa-2x"></i></dt>
+        <dd>理财产品</dd>
+    </dl>
+    <dl>
+        <dt><i class="fa fa-user fa-2x"></i></dt>
+        <dd>我的账户</dd>
+    </dl>
+    <dl>
+        <dt><i class="fa fa-ellipsis-h fa-2x"></i></dt>
+        <dd>更多</dd>
+    </dl>
+</footer>
+<script src="js/angular.js"></script>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("allDate", ["$scope", "$log", "$http", function ($scope, $log, $http) {
+        $http({
+            url: "js/data.json",
+            method: "get"
+        })
+            .success(function (data) {
+                $scope.data = data
+            })
+            .error(function () {
+                $log.log("fail")
+            })
+    }])
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+
+.header {
+  height: 40px;
+  background-color: #ed5858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .header h3 {
+    font-size: 20px;
+    color: #ffffff; }
+  .header .icons {
+    position: absolute;
+    right: 10px;
+    color: #ffffff; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
+  .content .title {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+    border-bottom: 1px solid #dddddd; }
+    .content .title .line {
+      height: 20px;
+      width: 1px;
+      background-color: #dddddd; }
+    .content .title span {
+      width: 50%;
+      font-size: 15px;
+      text-align: center;
+      color: #bdbdbd;
+      height: 100%;
+      line-height: 40px;
+      box-sizing: border-box; }
+    .content .title .on {
+      border-bottom: 2px solid #ed5858;
+      color: #ed5858; }
+  .content .allData {
+    color: #aaaaaa;
+    padding-left: 15px;
+    padding-right: 25px;
+    overflow-y: auto; }
+    .content .allData .record {
+      height: 100px; }
+      .content .allData .record .tit {
+        height: 35px;
+        display: flex;
+        align-items: flex-end; }
+        .content .allData .record .tit span {
+          font-size: 15px; }
+        .content .allData .record .tit .img {
+          height: 18px;
+          width: 2px;
+          padding-left: 10px;
+          padding-right: 10px; }
+        .content .allData .record .tit .hire {
+          color: #222222; }
+      .content .allData .record .substance {
+        display: flex;
+        justify-content: space-between;
+        height: 65px;
+        align-items: flex-end; }
+        .content .allData .record .substance i {
+          font-style: normal; }
+  .content .income {
+    display: flex;
+    align-items: flex-end; }
+    .content .income .left {
+      font-size: 50px;
+      color: #ff8800;
+      line-height: 50px; }
+    .content .income .right {
+      display: flex;
+      flex-direction: column;
+      align-self: center; }
+    .content .income .bot1 {
+      font-size: 20px;
+      color: #ff8800;
+      padding-top: 8px; }
+    .content .income .top1 {
+      font-size: 12px; }
+  .content .time {
+    display: flex;
+    flex-direction: column; }
+    .content .time .top2 {
+      font-size: 12px; }
+    .content .time .bot2 {
+      font-size: 12px;
+      padding-top: 8px; }
+      .content .time .bot2 i {
+        font-size: 20px; }
+  .content .shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .content .shop .top3 {
+      font-size: 12px;
+      height: 40px;
+      width: 40px;
+      background-color: #ff6161;
+      border-radius: 20px;
+      line-height: 40px;
+      text-align: center;
+      color: #ffffff; }
+    .content .shop .bot3 {
+      font-size: 12px; }
+      .content .shop .bot3 i {
+        color: #ed5858; }
+
+.footer {
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  background-color: #f7f7f7;
+  border-top: #c5c5c5; }
+  .footer dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .footer dd {
+    font-size: 12px; }
+
+/*# sourceMappingURL=style.css.map */
